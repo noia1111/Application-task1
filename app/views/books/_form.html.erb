@@ -22,6 +22,10 @@
   </div>
 
   <div>
-    <%= f.submit 'Create Book'%>
+    <% if @book.new_record? %>
+      <%= f.submit 'Create Book' %>
+    <% else %>
+      <%= f.submit 'Update Book' %>
+    <% end %>
   </div>
 <% end %>
